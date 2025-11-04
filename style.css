@@ -1,0 +1,64 @@
+/* Thème Clair (par défaut) */
+body {
+  background-color: #f0f0f0; /* Gris très clair */
+  color: #333; /* Texte sombre */
+  transition: background-color 0.5s, color 0.5s; /* Transition CSS pour un effet doux */
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+header {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Styles pour tous les boutons (Style de base moderne) */
+#toggle-theme-btn {
+  /* Mise en forme de la zone */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px; /* Bord arrondi pour un look moderne */
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease; /* Transition pour les effets d'interaction */
+
+  /* Couleurs par défaut (Thème Clair) */
+  background-color: #007bff; /* Bleu primaire */
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Effet au survol (hover) */
+#toggle-theme-btn:hover {
+  background-color: #0056b3; /* Bleu plus foncé au survol */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Ombre plus marquée */
+  transform: translateY(-2px); /* Léger déplacement vers le haut */
+}
+
+/* --- Adaptation au Mode Sombre (quand la classe est active sur le body) --- */
+
+.dark-theme #toggle-theme-btn {
+  /* Couleurs pour le Mode Sombre */
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Ombre claire */
+
+  background-color: #1a1a2e; /* Bleu nuit sombre */
+  color: #cdc6c6; /* Texte clair */
+}
+
+/* Effet au survol en Mode Sombre */
+.dark-theme #toggle-theme-btn:hover {
+  background-color: #898f8a; /* Vert plus foncé au survol */
+  box-shadow: 0 6px 8px rgba(255, 255, 255, 0.2);
+}
+/* Thème Sombre : C'est la classe à basculer en JS ! */
+.dark-theme {
+  background-color: #1a1a2e; /* Bleu nuit sombre */
+  color: #cdc6c6; /* Texte clair */
+}
