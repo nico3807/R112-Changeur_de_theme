@@ -1,0 +1,14 @@
+document.addEventListener("contextmenu", (e) => e.preventDefault());
+const t = document.getElementById("toggle-theme-btn");
+const c = document.querySelector("body");
+t.addEventListener("click", function () {
+  console.log("Bouton cliqué!");
+});
+t.addEventListener("click", function () {
+  c.classList.toggle("dark-theme");
+  if (c.classList.contains("dark-theme")) {
+    t.textContent = "Activer le Mode Clair";
+  } else {
+    t.textContent = "Activer le Mode Sombre";
+  }
+});

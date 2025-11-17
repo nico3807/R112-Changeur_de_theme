@@ -2,26 +2,75 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <title>TP2 - Changeur de thème</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu TD - TP Changeur de Thème</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <h1>Mon Site Statique</h1>
-      <button id="toggle-theme-btn">Activer le Mode Sombre</button>
+    <header class="header">
+      <h1>TP Changeur de Thème</h1>
+      <p>R1.12 Développement Web - BUT MMI Béziers</p>
     </header>
-    <main>
-      <section>
-        <h2>IUT de Béziers - Département MMI</h2>
-        <h3>Département MMI : le dév Web, c'est trop stylé !</h3>
-        <p>Ce texte doit changer de couleur quand le thème change.</p>
-      </section>
-    </main>
-    <footer>
-      <p>© 2025 — BUT MMI Béziers - MAURIN N.</p>
-      <p>R1.12 Développement Web</p>
-    </footer>
 
+    <div class="container">
+      <page2
+        >🧭 Parcourez les étapes de création du Changeur de Thème en
+        JavaScript</page2
+      >
+      <hr />
+
+      <ul class="nav-menu">
+        <li>
+          <a href="page_1.html">
+            <p class="menu-title">1. 🛠️ Préparation et Fichiers de Base</p>
+            <p class="menu-subtitle">
+              Création du projet, structure HTML et styles CSS par défaut /
+              sombre (15 min).
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="page_2.html">
+            <p class="menu-title">2. 🚀 Les Bases du JavaScript et le DOM</p>
+            <p class="menu-subtitle">
+              Sélection des éléments (bouton, body), écouteur d'événement
+              'click' et vérification en console (45 min).
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="page_3.html">
+            <p class="menu-title">3. 💡 Logique de Bascule et Amélioration</p>
+            <p class="menu-subtitle">
+              Utilisation de '.toggle()', test de la fonctionnalité et
+              changement du texte du bouton ('if/else') (30 min).
+            </p>
+          </a>
+        </li>
+      </ul>
+
+      <hr />
+
+      <div class="exemple-menu">
+        <a
+          href="https://nico3807.github.io/R112-Changeur_de_theme/index2.html"
+          target="_blank"
+        >
+          Voir le Résultat Attendu du TP
+        </a>
+      </div>
+      <div style="text-align: center; margin: 30px 0">
+        <button id="toggle-theme-btn" class="theme-toggle-button">
+          Activer le Mode Sombre
+        </button>
+      </div>
+    </div>
+    <footer>
+      <p style="text-align: center; font-size: 0.9em; color: #666">
+        © 2025 - BUT MMI Béziers - MAURIN N.<br />
+        R1.12 Développement Web
+      </p>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>

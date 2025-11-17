@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TP - 2. Les Bases du JavaScript</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>2. 🚀 Les Bases du JavaScript et le DOM</h1>
+        <p>
+          Cette partie met en place les fondations JavaScript nécessaires : la
+          sélection des éléments (DOM) et la détection du clic de l'utilisateur
+          (événement).
+        </p>
+      </header>
+
+      <hr />
+
+      <section id="dom-selection">
+        <h2>2.1 Sélection des éléments du DOM</h2>
+
+        <div class="note">
+          <strong>Objectifs :</strong> Utiliser les sélecteurs du DOM pour
+          identifier le bouton et l'élément 'body' et les stocker dans des
+          constantes JavaScript.
+        </div>
+
+        <ol start="7">
+          <li>
+            <p>
+              <strong>Q7. Sélectionner le bouton :</strong> Dans
+              <code>script.js</code>, déclarez une constante
+              (<code>const</code>) pour sélectionner le bouton en utilisant son
+              ID <code>toggle-theme-btn</code> avec la méthode
+              <code>document.getElementById('...')</code>.
+            </p>
+            <div class="code-step">
+              <pre>
+<code>// Q7. Sélectionner le bouton par son ID
+const themeButton = document.getElementById('toggle-theme-btn');</code></pre>
+            </div>
+          </li>
+          <li>
+            <p>
+              <strong>Q8. Sélectionner l'élément 'body' :</strong> Déclarez une
+              autre constante pour sélectionner la balise <code>body</code> en
+              utilisant cette fois la méthode
+              <code>document.querySelector('...')</code>.
+            </p>
+            <div class="code-step">
+              <pre>
+<code>// Q8. Sélectionner l'élément body par son nom de balise
+const bodyElement = document.querySelector('body');</code></pre>
+            </div>
+          </li>
+          <li>
+            <p>
+              <strong>Q9. Vérification en console :</strong> Ajoutez des
+              <code>console.log()</code> pour chaque constante. Ouvrez la
+              <strong>console du navigateur (F12)</strong> et vérifiez que les
+              éléments HTML sont affichés.
+            </p>
+            <div class="code-step">
+              <pre>
+<code>// Q9. Vérification des éléments sélectionnés
+console.log('Bouton sélectionné :', themeButton);
+console.log('Body sélectionné :', bodyElement);</code></pre>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <hr />
+
+      <section id="event-listener">
+        <h2>2.2 Gestion de l'événement 'click'</h2>
+
+        <div class="note">
+          <strong>Objectifs :</strong> Mettre en place un écouteur d'événement
+          sur le bouton pour que du code JavaScript s'exécute à chaque clic.
+        </div>
+
+        <ol start="10">
+          <li>
+            <p>
+              <strong>Q10. Ajouter un écouteur d'événement :</strong> Utilisez
+              la méthode
+              <code>.addEventListener('click', function() { ... })</code> sur la
+              constante <code>themeButton</code>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Q11. Tester l'événement :</strong> Dans la fonction de
+              l'écouteur, ajoutez un simple
+              <code>console.log('Bouton cliqué !')</code>. Vérifiez qu'un
+              message s'affiche dans la console à chaque clic sur le bouton.
+            </p>
+            <div class="code-step">
+              <pre>
+<code>// Q10 & Q11. Ajouter l'écouteur et tester le click
+themeButton.addEventListener('click', function() {
+    console.log('Bouton cliqué !'); 
+    // La logique de bascule sera ajoutée dans la partie 3
+});</code></pre>
+            </div>
+          </li>
+          <li>
+            <p>
+              <strong>Q12. Modification du CSS :</strong> Modifiez le CSS pour
+              créer un effet sur le bouton (au survol et pour chaque thème
+              sélectionné).
+            </p>
+            <div class="code-step">
+              <p>
+                *Le CSS a été ajouté à la fin du fichier 'style.css' (section
+                '.theme-toggle-button')*.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <hr />
+
+      <div class="menu-buttons">
+        <div class="back-to-menu">
+          <a href="page_1.html"
+            >← Partie précédente (Préparation et Fichiers)</a
+          >
+        </div>
+        <div class="back-to-menu">
+          <a href="page_3.html">→ Partie suivante (Logique de Bascule)</a>
+        </div>
+      </div>
+
+      <footer>
+        <p style="text-align: center; font-size: 0.9em; color: #666">
+          © 2025 - BUT MMI Béziers - MAURIN N.<br />
+          R1.12 Développement Web
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

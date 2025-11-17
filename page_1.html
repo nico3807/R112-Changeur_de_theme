@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TP - 1. Préparation et Fichiers de Base</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>1. 🛠️ Préparation et Fichiers de Base</h1>
+        <p>
+          Cette première partie consiste à créer l'environnement de travail et à
+          préparer la structure HTML et le style CSS de base pour le mode clair
+          et le mode sombre.
+        </p>
+      </header>
+
+      <hr />
+
+      <section id="structure-html">
+        <h2>1.1 Structure HTML (index.html)</h2>
+
+        <div class="note">
+          <strong>Objectifs :</strong> Créer le dossier, la structure des fichiers
+          et le code HTML minimal avec les liens et l'ID du bouton.
+        </div>
+
+        <ol>
+          <li>
+            <p>
+              <strong>Q1. &amp; Q2. Créer le dossier et les fichiers :</strong> Créez un dossier
+              nommé <code>TP2-Changeur de theme</code>. Créez à l'intérieur les
+              trois fichiers nécessaires : <code>index.html</code>,
+              <code>style.css</code> et <code>script.js</code>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Q3. Renseigner le code HTML :</strong> Dans
+              <code>index.html</code>, insérez la structure HTML minimale et le
+              bouton. <strong>Attention :</strong> le bouton doit absolument avoir l'attribut
+              <code>id="toggle-theme-btn"</code>.
+            </p>
+            <div class="code-step">
+              <p>Extrait de 'index.html' pour le bouton :</p>
+              <pre>
+<code>&lt;!-- ... dans &lt;body&gt; ... --&gt;
+&lt;button id="toggle-theme-btn" class="theme-toggle-button"&gt;
+  Activer le Mode Sombre
+&lt;/button&gt;
+&lt;!-- ... --&gt;</code></pre>
+            </div>
+          </li>
+          <li>
+            <p>
+              <strong>Q4. Lier la feuille de style et le script :</strong>
+              <ul>
+                <li>Le lien vers <code>style.css</code> se fait dans la balise <code>&lt;head&gt;</code>.</li>
+                <li>Le lien vers <code>script.js</code> doit se faire juste avant la balise de fermeture <code>&lt;/body&gt;</code>.</li>
+              </ul>
+            </p>
+            <div class="code-step">
+              <p>Exemples de liaison :</p>
+              <pre>
+<code>&lt;!-- Dans &lt;head&gt; --&gt;
+&lt;link rel="stylesheet" href="style.css" /&gt;
+
+&lt;!-- Avant &lt;/body&gt; --&gt;
+&lt;script src="script.js"&gt;&lt;/script&gt;</code></pre>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <hr />
+
+      <section id="styles-css">
+        <h2>1.2 Renseignement du CSS</h2>
+
+        <div class="note">
+          <strong>Objectifs :</strong> Définir le style de base pour le thème clair et créer
+          la classe de bascule <code>.dark-theme</code>.
+        </div>
+
+        <ol start="5">
+          <li>
+              <p>
+              <strong>Q5. Thème clair par défaut :</strong> Dans <code>style.css</code>,
+              définissez un <code>background-color</code> (clair) et un
+              <code>color</code> (sombre) pour la balise <code>body</code> qui
+              représentent le mode clair.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Q6. Définir la classe CSS <code>.dark-theme</code> :</strong> Créez la
+              classe <code>.dark-theme</code> qui, une fois appliquée au
+              <code>body</code>, inversera les couleurs (fond sombre, texte
+              clair).
+            </p>
+            <div class="code-step">
+              <p>Exemple de CSS (voir fin du fichier 'style.css') :</p>
+              <pre>
+<code>/* Mode Clair (Style par défaut) */
+body {
+  background-color: #f4f4f4; 
+  color: #333; 
+}
+
+/* Mode Sombre (Classe de bascule) */
+body.dark-theme {
+  background-color: #121212; 
+  color: #e0e0e0;
+}</code></pre>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <hr />
+
+      <div class="menu-buttons">
+        <div class="back-to-menu">
+          <a href="index.html">↑ Retour au Menu du TP</a>
+        </div>
+        <div class="back-to-menu">
+          <a href="page_2.html">→ Partie suivante (Bases du JavaScript)</a>
+        </div>
+      </div>
+
+      <footer>
+        <p style="text-align: center; font-size: 0.9em; color: #666">
+          © 2025 - BUT MMI Béziers - MAURIN N.<br />
+          R1.12 Développement Web
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

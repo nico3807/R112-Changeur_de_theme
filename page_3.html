@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TP - 3. Logique de Bascule</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>3. 💡 Logique de Bascule (Toggle)</h1>
+        <p>
+          Le cœur de la fonctionnalité : basculer la classe CSS sur le
+          <code>body</code> et mettre à jour le texte du bouton en fonction du
+          thème actif.
+        </p>
+      </header>
+
+      <hr />
+
+      <section id="toggle-logic">
+        <h2>3.1 Bascule de la classe CSS</h2>
+
+        <div class="note">
+          <strong>Objectifs :</strong> Utiliser la méthode 'toggle()' pour
+          ajouter/retirer la classe 'dark-theme' de l'élément 'body' en un seul
+          appel. C'est la méthode la plus simple et la plus propre en
+          JavaScript.
+        </div>
+
+        <ol start="13">
+          <li>
+            <p>
+              <strong>Q13. Basculer la classe :</strong> À l'intérieur de la
+              fonction <code>click</code>, utilisez la propriété
+              <code>.classList</code> de l'élément <code>body</code> et la
+              méthode <code>.toggle('dark-theme')</code>.
+            </p>
+            <div class="code-step">
+              <pre>
+<code>// Q13. Basculer la classe .dark-theme sur body
+bodyElement.classList.toggle('dark-theme'); // C'est la ligne la plus importante !</code></pre>
+            </div>
+          </li>
+          <li>
+            <p>
+              <strong>Q14. Tester la fonctionnalité :</strong> Cliquez sur le
+              bouton. Le fond et le texte de la page doivent changer. Cliquez à
+              nouveau : le thème doit revenir à l'état initial.
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <hr />
+
+      <section id="button-text-update">
+        <h2>3.2 Mise à jour dynamique du texte du bouton</h2>
+
+        <div class="note">
+          <strong>Objectifs :</strong> Améliorer l'interface utilisateur en
+          changeant le texte du bouton (ex: "Activer le Mode Clair" si le thème
+          sombre est actif).
+        </div>
+
+        <ol start="15">
+          <li>
+            <p>
+              <strong>Q15. Utiliser 'if / else' :</strong> Utilisez une
+              structure conditionnelle <code>if / else</code> et la méthode
+              <code>.classList.contains('dark-theme')</code> pour vérifier si la
+              classe est présente.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Q16. Remplir la condition 'if' :</strong> Si la classe
+              <code>.dark-theme</code> est présente, changez la propriété
+              <code>.textContent</code> du bouton en "Activer le Mode Clair".
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Q17. Remplir la condition 'else' :</strong> Sinon, changez
+              le <code>.textContent</code> du bouton en "Activer le Mode
+              Sombre".
+            </p>
+            <div class="code-step">
+              <p>Code complet de la fonction 'click' :</p>
+              <pre>
+<code>themeButton.addEventListener('click', function() {
+    // Q13. Bascule la classe .dark-theme
+    bodyElement.classList.toggle('dark-theme');
+
+    // Q15-Q17. Change le texte du bouton selon le thème actif
+    if (bodyElement.classList.contains('dark-theme')) {
+        // Mode sombre ACTIF
+        themeButton.textContent = 'Activer le Mode Clair';
+    } else {
+        // Mode clair ACTIF
+        themeButton.textContent = 'Activer le Mode Sombre';
+    }
+});</code></pre>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <hr />
+
+      <div class="menu-buttons">
+        <div class="back-to-menu">
+          <a href="page_2.html">← Partie précédente (Bases du JavaScript)</a>
+        </div>
+        <div class="back-to-menu">
+          <a href="index.html">↑ Retour au Menu du TP</a>
+        </div>
+      </div>
+
+      <footer>
+        <p style="text-align: center; font-size: 0.9em; color: #666">
+          © 2025 - BUT MMI Béziers - MAURIN N.<br />
+          R1.12 Développement Web
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
