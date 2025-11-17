@@ -37,11 +37,6 @@
               <code>.classList</code> de l'élément <code>body</code> et la
               méthode <code>.toggle('dark-theme')</code>.
             </p>
-            <div class="code-step">
-              <pre>
-<code>// Q13. Basculer la classe .dark-theme sur body
-bodyElement.classList.toggle('dark-theme'); // C'est la ligne la plus importante !</code></pre>
-            </div>
           </li>
           <li>
             <p>
@@ -86,23 +81,6 @@ bodyElement.classList.toggle('dark-theme'); // C'est la ligne la plus importante
               le <code>.textContent</code> du bouton en "Activer le Mode
               Sombre".
             </p>
-            <div class="code-step">
-              <p>Code complet de la fonction 'click' :</p>
-              <pre>
-<code>themeButton.addEventListener('click', function() {
-    // Q13. Bascule la classe .dark-theme
-    bodyElement.classList.toggle('dark-theme');
-
-    // Q15-Q17. Change le texte du bouton selon le thème actif
-    if (bodyElement.classList.contains('dark-theme')) {
-        // Mode sombre ACTIF
-        themeButton.textContent = 'Activer le Mode Clair';
-    } else {
-        // Mode clair ACTIF
-        themeButton.textContent = 'Activer le Mode Sombre';
-    }
-});</code></pre>
-            </div>
           </li>
         </ol>
       </section>
